@@ -59,7 +59,7 @@ export default function Shops({navigation}) {
 
             <View style={styles.viewLocal}>
                 <TouchableOpacity style={styles.btnLocal}
-                onPress={navigation.navigate("Points")}
+                onPress={() => navigation.navigate("Maps")}
                 >
                     <Text style={styles.textLocal}>Localização atual</Text>
                     <FontAwesome
@@ -73,7 +73,7 @@ export default function Shops({navigation}) {
 
            <View style={styles.viewParceiros}>
                <TouchableOpacity style={styles.btnParceiros}
-                onPress={navigation.navigate("Points")}>
+                onPress={() =>navigation.navigate("Points")}>
                    <Text style={styles.textParceiros}>Parceiros atuais</Text>
                </TouchableOpacity>
 
@@ -103,7 +103,7 @@ export default function Shops({navigation}) {
           
            <View>
             <TouchableOpacity
-             onPress={navigation.navigate("Points")}
+             onPress={() => navigation.navigate("Points")}
               style={styles.btnIcon}>
                 <FontAwesome
                 style={styles.icon}

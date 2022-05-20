@@ -5,7 +5,7 @@ import Icon from "react-native-vector-icons/Ionicons";
 import { StatusBar } from "expo-status-bar";
 
 
-export default function Points() {
+export default function Points({navigation}) {
 
     const DATA = [
         {

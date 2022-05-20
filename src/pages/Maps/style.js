@@ -17,9 +17,11 @@ const styles = StyleSheet.create({
         height: Dimensions.get('window').height,
       },
       viewMaps:{
+          marginTop: 50,
           padding: 40,
-          backgroundColor: '#012026',
+          backgroundColor: '#01543a',
           elevation: 3,
+          borderBottomRightRadius: 15
       },
       viewText: {
           color: '#fff',   

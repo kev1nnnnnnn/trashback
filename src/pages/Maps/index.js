@@ -68,7 +68,7 @@ return (
             latitude: -3.0952765,
             longitude: -60.0262331,}}
         >
-       <FontAwesome name="trash" size={40} color="blue" />
+       <FontAwesome name="trash" size={40} color="#01543a" />
         </Marker>
 
         <Marker 
@@ -76,7 +76,7 @@ return (
             latitude: -3.092286985354928,
             longitude:-60.05043368786574}}
         >
-        <FontAwesome name="trash" size={40} color="blue" />
+        <FontAwesome name="trash" size={40} color="#01543a" />
         </Marker>
 
         <Marker 
@@ -84,7 +84,7 @@ return (
             latitude: -3.10719,
             longitude:-60.0261 }}
         >
-        <FontAwesome name="trash" size={40} color="red" />
+        <FontAwesome name="trash" size={40} color="#01543a" />
         </Marker>
 
         <Marker 
@@ -92,7 +92,7 @@ return (
             latitude: -3.0927666,
             longitude:-60.0404007 }}
         >
-        <FontAwesome name="trash" size={40} color="#eead2d" />
+        <FontAwesome name="trash" size={40} color="#01543a" />
         </Marker>
 
         <Marker 
@@ -100,7 +100,7 @@ return (
             latitude: -3.0794240 ,
             longitude:-60.0346189 }}
         >
-        <FontAwesome name="trash" size={40} color="orange" />
+        <FontAwesome name="trash" size={40} color="#01543a" />
         </Marker>
 
         <Marker 
@@ -108,11 +108,14 @@ return (
             latitude: -3.0776883 ,
             longitude:-60.0084413 }}
         >
-        <FontAwesome name="trash" size={40} color="#964b00" />
+        <FontAwesome name="trash" size={40} color="#01543a" />
         </Marker>
 
 
-
+        <StatusBar
+        backgroundColor="#01543a"
+        barStyle="content-light"
+        />
         
       
     </MapView>

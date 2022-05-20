@@ -9,11 +9,12 @@ import {View,
     } from 'react-native';
   
 // Import do banco de dados
-// import firebase from "../../config/firebaseconfig.js";
+import firebase from "../../config/firebaseconfig.js";
 import styles from './style';
+import { StatusBar } from 'expo-status-bar'
 import Icon from "react-native-vector-icons/Ionicons";
 import { LinearGradient } from 'expo-linear-gradient';
-// require('firebase/auth');
+ require('firebase/auth');
 
 /* Função para realizar o login, passando {navigation} como parametro
 ** para redirecionar para outras as paginas
@@ -32,20 +33,20 @@ export default function Login({ navigation }) {
     ** Quando um usuário fizer login no app, transmita o endereço de e-mail e a senha dele para 
     ** signInWithEmailAndPassword:
     */
-    // const loginFirebase = () => {
+    const loginFirebase = () => {
 
-    //     firebase.auth().signInWithEmailAndPassword(email, password)
-    //     .then((userCredential) => {
+        firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
         
-    //         let user = userCredential.user;
-    //         navigation.navigate('Products',{idUser: user.uid})
-    //     })
-    //     .catch((error) => {
-    //         setErrorLogin(true);
-    //         let errorCode = error.code;
-    //         let errorMessage = error.message;
-    //     });
-    // }
+            let user = userCredential.user;
+            navigation.navigate('Shops',{idUser: user.uid})
+        })
+        .catch((error) => {
+            setErrorLogin(true);
+            let errorCode = error.code;
+            let errorMessage = error.message;
+        });
+    }
     function verificaLogin() {
 
         if (email == null && password == null) {
@@ -83,6 +84,8 @@ export default function Login({ navigation }) {
     <TextInput
     style={styles.input}
     placeholder="Digite seu email"
+    onChangeText={setEmail}
+    value={email}
   
     />
     {/* Entrada: Password */}
@@ -90,6 +93,8 @@ export default function Login({ navigation }) {
     style={styles.input}
     secureTextEntry={true}
     placeholder="Digite sua senha"
+    onChangeText={setPassword}
+    value={password}
    
     />
 
@@ -150,7 +155,10 @@ export default function Login({ navigation }) {
 
     <View style={{height: 100}} />
 
-    
+    <StatusBar
+    backgroundColor="#00e1a7"
+    barStyle="content-light"
+    />
     
     </KeyboardAvoidingView>
         

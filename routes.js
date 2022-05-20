@@ -26,7 +26,7 @@ const Tab = createBottomTabNavigator();
 export default function Navigation() { 
   return (
   <Stack.Navigator 
-    initialRouteName='Qrscan'
+    initialRouteName='Shops'
     screenOptions={{headerShown:false}}>  
       <Stack.Screen
         name="Login"
@@ -38,52 +38,15 @@ export default function Navigation() {
         component={CreateUser}
       /> 
 
-
     <Stack.Screen
         name="Shops"
         component={MyTabs}
       />
-
-    <Stack.Screen
-        name="Points"
-        component={Points}
-    />
-
     <Stack.Screen
     name="Information"
     component={Information}
-    />
-
-    <Stack.Screen
-    name="Maps"
-    component={Maps}
-    />
-
+    />  
     
-  <Stack.Screen
-    name="Qrscan"
-    component={Qrscan}
-  />
-    
-    
-    
-
-    </Stack.Navigator>
-  )
-}
-
-function MyStack2() { 
-  return (
-  <Stack.Navigator 
-    screenOptions={{headerShown:false}}>  
-            <Stack.Screen
-        name="Profile"
-        component={Profile}
-        options={{
-          headerTintColor: "##012026",
-          headerLeft: null
-        }}
-      />
 
     </Stack.Navigator>
   )
@@ -104,10 +67,6 @@ function MyStack1(){
     />
 
     <Stack.Screen
-    name="Points"
-    component={Points}
-      />
-    <Stack.Screen
     name="Information"
     component={Information}
     />
@@ -120,14 +79,32 @@ function MyStack1(){
     name="Qrscan"
     component={Qrscan}
     />
-    
-    
-      
-
-      
+     <Stack.Screen
+    name="Points"
+    component={Points}
+    />
+  
   </Stack.Navigator>
     )
   }
+
+  function MyStack2() { 
+    return (
+    <Stack.Navigator 
+      screenOptions={{headerShown:false}}>  
+          <Stack.Screen
+          name="Profile"
+          component={Profile}
+          options={{
+            headerTintColor: "##012026",
+            headerLeft: null
+          }}
+        />
+  
+      </Stack.Navigator>
+    )
+  }
+  
 
 function MyTabs() {
   return (

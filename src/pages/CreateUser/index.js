@@ -34,7 +34,7 @@ export default function CreateUser({ navigation }) {
             .then((userCredential) => {
                 
             var user = userCredential.user;
-            navigation.navigate("Products", { idUser: user.uid });
+            navigation.navigate("Shops", { idUser: user.uid });
             
             })
             .catch((error) => {
