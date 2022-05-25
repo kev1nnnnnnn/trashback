@@ -10,6 +10,7 @@ import {
     import styles from './style';
     import Icon from "react-native-vector-icons/Ionicons";
     import firebase from "../../config/firebaseconfig.js/";
+    import { StatusBar } from "expo-status-bar";
 
 
 /* Criação da função para cadastrar usuários no sistema.
@@ -21,10 +22,12 @@ export default function CreateUser({ navigation }) {
     ** const email, passa como -value-
     ** const setEmail é chamada no -onChange-
     */
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errorRegister, setErrorRegister] = useState("");
     
+    const database = firebase.firestore();
     // Criada uma const que recebe uma função no qual fará o registro dos usuários.
     const register = () => {
 
@@ -34,7 +37,16 @@ export default function CreateUser({ navigation }) {
             .then((userCredential) => {
                 
             var user = userCredential.user;
-            navigation.navigate("Shops", { idUser: user.uid });
+            
+            database.collection("user").add({ //Add a tarefa
+               
+                nome: name,
+                email: email,
+                status: true,
+                
+            });
+
+            navigation.navigate("Login", { idUser: user.uid });
             
             })
             .catch((error) => {
@@ -53,12 +65,24 @@ export default function CreateUser({ navigation }) {
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         style={styles.container}
         >
-            <Text style={styles.textTitulo}>Register</Text>      
+            <Text style={styles.textTitulo}>Realize seu</Text>
+            <Text style={styles.textTitulo2}>cadastro...</Text>   
+
+             {/* Entrada: nome Complet */}
+             <TextInput
+            style={styles.input}
+            placeholder="Digite seu nome completo"
+            placeholderTextColor="#012026"
+            type="text"
+            onChangeText={(text) => setName(text)}
+            value={name}
+            />   
 
             {/* Entrada: Email */}
             <TextInput
             style={styles.input}
             placeholder="Digite seu email"
+            placeholderTextColor="#012026"
             type="text"
             onChangeText={(text) => setEmail(text)}
             value={email}
@@ -68,10 +92,12 @@ export default function CreateUser({ navigation }) {
             style={styles.input}
             secureTextEntry={true}
             placeholder="Digite sua senha"
+            placeholderTextColor="#012026"
             type="text"
             onChangeText={(text) => setPassword(text)}
             value={password}
             />
+           
             {/* Faz a verificaçao do erro, caso houver algum */}
             {errorRegister === true
             ?
@@ -118,6 +144,11 @@ export default function CreateUser({ navigation }) {
                 </Text>
             </Text>
                 <View style={{height: 100}} />
+                <StatusBar 
+                style="light"
+                backgroundColor="#012026"
+            
+                />
         </KeyboardAvoidingView>
 
         

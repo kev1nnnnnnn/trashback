@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
       viewMaps:{
           marginTop: 50,
           padding: 40,
-          backgroundColor: '#01543a',
+          backgroundColor: '#012026',
           elevation: 3,
           borderBottomRightRadius: 15
       },

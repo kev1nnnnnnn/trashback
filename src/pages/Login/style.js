@@ -1,3 +1,10 @@
+
+/* 
+#00f777
+#01543a
+#012026
+#1c1c1c
+*/
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
@@ -10,8 +17,7 @@ const styles = StyleSheet.create({
     
     button: {
         marginTop: 20,
-        marginLeft: 'auto',
-        marginRight: 'auto',
+        marginBottom: 20,
         alignItems: 'center',
         backgroundColor: '#4267B2',
         padding:10,
@@ -23,10 +29,12 @@ const styles = StyleSheet.create({
     input: {
         width: '80%',
         height: 50,
-        margin: 12,
-        borderBottomWidth: 1,
-        borderBottomColor: '#ec9f05',
+        margin: 20,
+        borderRadius: 25,
         padding: 10,
+        backgroundColor: '#fff',
+        borderColor: '#012026',
+        borderWidth: 0.5,
     },
     buttonLogin: {
         marginLeft: 'auto',
@@ -34,12 +42,12 @@ const styles = StyleSheet.create({
         width: '80%',
         marginTop: 30,
         alignItems: 'center',
-        backgroundColor: '#ec9f05',
+        backgroundColor: '#012026',
         padding: 8,
         borderRadius: 25,
     },
     textButtonLogin: {
-        color: '#fff',
+        color: '#00f777',
         fontSize: 22,
 
     },

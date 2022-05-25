@@ -25,18 +25,19 @@ const styles = StyleSheet.create({
   },
   iconAlert: {
     fontSize: 45,
-    color: '#fff',
+    color: '#00f777',
     marginRight: 30,
   },
   iconPlus: {
     fontSize: 40,
-    color: '#fff',
+    color: '#012026',
     marginRight: 15,
   },
   imgShop: {
     width: 60,
     height: 60,
     marginLeft: 30,
+    borderRadius: 10,
   },
   viewProductsPoints: {
       flexDirection: 'row',
@@ -45,13 +46,11 @@ const styles = StyleSheet.create({
       marginTop: 15,
       marginRight: 10,
       marginLeft: 10,
-      backgroundColor: '#01543a',
-      borderColor: '#012026',
-      borderWidth: 1,
-      borderRadius: 20,
-      borderStyle: 'solid',
-      padding: 5,
-      borderBottomWidth: 1
+      marginBottom: 5,
+      borderBottomRightRadius: 20,
+      borderTopLeftRadius: 10,
+      padding: 10,
+      elevation: 3,
   },
 
   imgRender: {
@@ -60,11 +59,24 @@ const styles = StyleSheet.create({
     
   },
   title: {
-    color: '#fff',
+    color: '#012026',
     fontFamily: ''
   },
   textPoints: {
-    color: '#fff',
+    color: '#012026',
+  },
+  btnPoints: {
+    backgroundColor: '#012026',
+    padding: 10,
+    marginBottom: 70,
+    marginLeft: 30,
+    marginRight: 30,
+    borderRadius: 20,
+  },
+  btnText: {
+    textAlign: 'center',
+    fontSize: 20,
+    color: '#00f777',
   },
 
 });

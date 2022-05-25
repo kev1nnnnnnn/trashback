@@ -119,8 +119,8 @@ function MyTabs() {
         tabBarStyle: {
         tabBarStyle: { display: 'none' },
         paddingVertical: 5,
-        backgroundColor:'#01543a',
-        borderTopColor: '#1c1c1c',
+        backgroundColor:'#012026',
+        borderTopColor: '#00f777',
       },
         
       }}
@@ -136,7 +136,7 @@ function MyTabs() {
         unmountOnBlur: true,
         
         tabBarIcon: ({ color, size }) => (
-          <Icon name="home" color='#fff' size={22}/>
+          <Icon name="home" color='#00f777' size={22}/>
         ),
       }} />
     
@@ -146,7 +146,7 @@ function MyTabs() {
       options={{
         unmountOnBlur: true,
         tabBarIcon: ({ color, size }) => (
-          <Icon name="person" color='#fff' size={22}/>
+          <Icon name="person" color='#00f777' size={22}/>
         ),
       }} 
       />

@@ -4,7 +4,7 @@ import { BarCodeScanner } from 'expo-barcode-scanner';
 import { styles } from './style';
 import Icon from "react-native-vector-icons/Ionicons";
 
-export default function Qrscan() {
+export default function Qrscan({navigation}) {
 
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
@@ -22,7 +22,8 @@ export default function Qrscan() {
   const handleBarCodeScanned = ({ type, data, counter }) => {
     setScanned(true);
     counter = scanned + 10;
-    alert(`Parabéns por contribuir com o nosso meio ambiente! tipo de reciclagem: ${data} você ganhou :  ${counter} pontos`);
+    alert(`Parabéns por contribuir com o nosso meio ambiente! \n\ntipo de reciclagem: ${data} \n\nvocê ganhou:  ${counter} trashcoins.`);
+    navigation.navigate("Shops");
   };
 
   if (hasPermission === null) {

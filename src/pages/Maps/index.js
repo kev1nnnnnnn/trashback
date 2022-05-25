@@ -113,7 +113,7 @@ return (
 
 
         <StatusBar
-        backgroundColor="#01543a"
+        backgroundColor="#012026"
         barStyle="content-light"
         />
         

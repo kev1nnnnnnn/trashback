@@ -23,7 +23,8 @@ const styles = StyleSheet.create({
         marginRight: 20,
         paddingLeft: 20,
         padding: 8,
-        backgroundColor: '#f1f1f1',
+        backgroundColor: '#fff',
+        borderRadius: 10
     },
     iconLocal: {
 
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#00f777',
         padding: 15,
         width: 180,
-        borderRadius: 5,
+        borderRadius: 10,
     
     },
     textParceiros: {
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#00f777',
         borderRadius: 150 / 2,
         left: 20,
-        bottom: -250,
+        bottom: -200,
     },
     icon: {
         marginLeft: 16,
@@ -68,10 +69,25 @@ const styles = StyleSheet.create({
         elevation: 3,
     },
     viewShops: {
+        marginTop: 10,
+    },
+    img: {
+        width: 80, 
+        height: 80,
+        borderWidth: 1,
+        borderColor: '#012026',
+        borderRadius: 20,
+        elevation: 3
+    },
+    textTop:  {
         borderTopWidth: 1,
-        borderColor: '#fff',
-        marginTop: 20,
-        height: 200,
+        borderColor: '#00f777',
+        paddingTop: 20,
+        color: '#fff',
+        fontSize: 15,
+        marginTop: 15,
+        paddingLeft: 20,
+
     }
 
 });

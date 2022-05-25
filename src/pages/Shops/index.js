@@ -3,6 +3,7 @@ import {View, Text, TouchableOpacity, SafeAreaView, FlatList, Image} from "react
 import styles from './style';
 import { FontAwesome } from "@expo/vector-icons";
 import { StatusBar } from "expo-status-bar";
+import { useNavigation } from "@react-navigation/native";
 
 const DATA = [
     {
@@ -38,21 +39,37 @@ const DATA = [
       img: require('../../../assets/images/pic.png')
     },
   ];
+
+ 
   
-  const Item = ({ title }) => (
-    <View style={styles.item}>
-      <Text style={styles.title}>{title}</Text>
-    </View>
-  );
-  const renderItem = ({ item }) => (
-     <View style={styles.viewRenderShop}>
-         <Image source={item.img} style={{width: 80, height: 80 }} />
+  const Item = ({ title, onPress }) => (
+    <TouchableOpacity onPress={onPress} >
+      <View style={styles.item}>
+        <Text style={styles.title}>{title}</Text>
+      </View>
+    </TouchableOpacity>
 
-     </View>
-      
   );
+  
 
-export default function Shops({navigation}) {
+export default function Shops() {
+
+  const navigation = useNavigation();
+  
+  const renderItem = ({ item }) => {
+    return (
+      <View style={styles.viewRenderShop}>
+     <TouchableOpacity
+      onPress={() => navigation.navigate("Points")}
+      >
+       <Image source={item.img} style={styles.img} />
+
+     </TouchableOpacity>
+
+   </View>
+    );
+  }
+   
 
     return (
         <View style={styles.container}>
@@ -83,15 +100,12 @@ export default function Shops({navigation}) {
            </View>
 
            <View>
-             <TouchableOpacity>
-                <Text></Text>
-             </TouchableOpacity>
+              <Text style={styles.textTop}>Lojas onde seu descarte irá valer trashcoins!</Text>
            </View>
 
            
             <SafeAreaView style={styles.viewShops}>
                 <FlatList
-                 onPress={navigation.navigate("Points")}
                 decelerationRate="fast"
                 showsHorizontalScrollIndicator={false}
                 data={DATA}
@@ -100,6 +114,17 @@ export default function Shops({navigation}) {
                 keyExtractor={item => item.id}
                 />
             </SafeAreaView>
+            <SafeAreaView style={styles.viewShops}>
+                <FlatList
+                decelerationRate="fast"
+                showsHorizontalScrollIndicator={false}
+                data={DATA}
+                horizontal={true}
+                renderItem={renderItem}
+                keyExtractor={item => item.id}
+                />
+            </SafeAreaView>
+            
           
            <View>
             <TouchableOpacity
@@ -121,8 +146,8 @@ export default function Shops({navigation}) {
 
 
             <StatusBar 
-            barStyle="light-content"
-            backgroundColor="#f1f1f1"
+            style="light"
+            backgroundColor="#012026"
           
             />
         </View>

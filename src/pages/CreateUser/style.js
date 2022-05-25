@@ -1,3 +1,10 @@
+/* 
+#00f777
+#01543a
+#012026
+#1c1c1c
+*/
+
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
@@ -10,13 +17,18 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     textTitulo: {
-        marginBottom: '10%',
-        textAlign: 'center',
-        fontSize: 60,
-        color: '#ff7801',
+        marginRight: 190,
+        fontSize: 25,
+        color: '#012026',
         fontWeight: 'bold',
     },
-    
+    textTitulo2: {
+        marginBottom: 30,
+        marginRight: 90,
+        fontSize: 50,
+        color: '#012026',
+        fontWeight: 'bold',
+    },
     button: {
         marginTop: 30,
         marginLeft: 'auto',
@@ -33,9 +45,11 @@ const styles = StyleSheet.create({
         width: '80%',
         height: 50,
         margin: 12,
-        borderBottomWidth: 1,
-        borderBottomColor: '#ff7801',
+        borderRadius: 25,
         padding: 10,
+        backgroundColor: '#fff',
+        borderColor: '#012026',
+        borderWidth: 0.5,
     },
     buttonRegister: {
         marginLeft: 'auto',
@@ -43,19 +57,19 @@ const styles = StyleSheet.create({
         width: '80%',
         marginTop: 30,
         alignItems: 'center',
-        backgroundColor: '#ff7801',
+        backgroundColor: '#012026',
         padding: 8,
         borderRadius: 25,
     },
     textButtonRegister: {
-        color: '#fff',
+        color: '#00f777',
         fontSize: 22,
 
     },
     textRegister: {
         marginTop: '10%',
         fontSize: 60,
-        color:'#ff7801',
+        color:'#00f777',
         textAlign: 'center',
         fontWeight: 'bold',
         
@@ -66,7 +80,7 @@ const styles = StyleSheet.create({
         color: '#4d5156',
     },
     linkSubscribe: {
-        color: '#ff7801',
+        color: '#012026',
         fontWeight: '600',
         fontSize: 16,
     },

@@ -18,32 +18,22 @@ export default function Points({navigation}) {
           id: '2',
           title: 'canudo plástico',
           points: 40,
-          img: require('../../../assets/images/copobobs.jpg')
+          img: require('../../../assets/images/canudos.jpg')
         },
         {
           id: '3',
           title: 'sacola plástica',
           points: 60,
-          img: require('../../../assets/images/copobobs.jpg')
+          img: require('../../../assets/images/sacola.jpg')
         },
         {
           id: '4',
           title: 'papel ',
           points: 60,
-          img: require('../../../assets/images/copobobs.jpg')
+          img: require('../../../assets/images/papel.jpg')
         },
-        {
-          id: '5',
-          title: 'sacola plástica',
-          points: 60,
-          img: require('../../../assets/images/copobobs.jpg')
-        },
-        {
-          id: '6',
-          title: 'sacola plástica',
-          points: 60,
-          img: require('../../../assets/images/copobobs.jpg')
-        },
+    
+
       ];
 
       const Item = ({ title, img }) => (
@@ -84,12 +74,23 @@ export default function Points({navigation}) {
                     keyExtractor={item => item.id}
                 />
             </SafeAreaView>
+
+            <TouchableOpacity 
+            style={styles.btnPoints}
+            onPress={() => navigation.navigate("Qrscan")}
+            >
+
+            <Text style={styles.btnText}>Scanear</Text>
+
+            </TouchableOpacity>
+
+
            
       <StatusBar 
-            barStyle="light-content"
-            backgroundColor="#ffff"
-          
-            />
+      backgroundColor="#012026"
+      style="light"
+    
+      />
      
         </View>
     );

@@ -156,8 +156,8 @@ export default function Login({ navigation }) {
     <View style={{height: 100}} />
 
     <StatusBar
-    backgroundColor="#00e1a7"
-    barStyle="content-light"
+    backgroundColor="#012026"
+    style="light"
     />
     
     </KeyboardAvoidingView>
